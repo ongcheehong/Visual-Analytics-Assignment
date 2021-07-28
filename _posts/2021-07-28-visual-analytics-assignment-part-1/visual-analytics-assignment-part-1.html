@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>Visual Analytics Assignment Part 1</title>
+
+  <meta property="description" itemprop="description" content="A short description of the post."/>
+
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-07-28"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-07-28"/>
+  <meta name="article:author" content="Ong Chee Hong"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="Visual Analytics Assignment Part 1"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A short description of the post."/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="Visual Analytics Assignment Part 1"/>
+  <meta property="twitter:description" content="A short description of the post."/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Visual Analytics Assignment Part 1"]},{"type":"character","attributes":{},"value":["A short description of the post.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Ong Chee Hong"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/alexongch/"]}]}]},{"type":"character","attributes":{},"value":["07-28-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["data/MC2/~$2_data_readme.docx","data/MC2/AnswerSheet/VAST Challenge 2021 MC2 Answer Sheet.htm","data/MC2/AnswerSheet/VAST Challenge 2021 MC2 Answer Sheet_files/colorschememapping.xml","data/MC2/AnswerSheet/VAST Challenge 2021 MC2 Answer Sheet_files/filelist.xml","data/MC2/AnswerSheet/VAST Challenge 2021 MC2 Answer Sheet_files/themedata.thmx","data/MC2/car-assignments.csv","data/MC2/cc_data.csv","data/MC2/Geospatial/Abila.dbf","data/MC2/Geospatial/Abila.kml","data/MC2/Geospatial/Abila.prj","data/MC2/Geospatial/Abila.sbn","data/MC2/Geospatial/Abila.sbx","data/MC2/Geospatial/Abila.shp","data/MC2/Geospatial/Abila.shx","data/MC2/Geospatial/Kronos Island.kmz","data/MC2/Geospatial/Kronos_Island.dbf","data/MC2/Geospatial/Kronos_Island.prj","data/MC2/Geospatial/Kronos_Island.sbn","data/MC2/Geospatial/Kronos_Island.sbx","data/MC2/Geospatial/Kronos_Island.shp","data/MC2/Geospatial/Kronos_Island.shx","data/MC2/Geospatial/MC2-tourist_modified.tif","data/MC2/Geospatial/MC2-tourist_modified.tif.points","data/MC2/gps.csv","data/MC2/loyalty_data.csv","data/MC2/MC2-tourist.jpg","data/MC2/MC2-tourist_modified.tif","data/MC2/MC2-tourist_modified.tif.points","data/MC2/MC2_data_readme.docx","img/101_106_107.png","img/107 data.png","img/107 map.png","img/14 network.png","img/16.png","img/17 data.png","img/17 map.png","img/17 network.png","img/18 network.png","img/18.png","img/21 map.png","img/21.png","img/24.png","img/26 canero street.png","img/26 network.png","img/5.png","img/8 data.png","img/8 map.png","img/8 network 2.png","img/8 network.png","img/bar chart.PNG","img/bar.png","img/day 10.png","img/Density plot.jpg","img/geo.PNG","img/katerine.png","img/line chart.PNG","img/localization.png","img/map tif.png","img/MC2-tourist.jpg","img/network.PNG","img/Ouzeri Elian.png","img/uturn.png","visual-analytics-assignment-part-1_files/anchor/anchor.min.js","visual-analytics-assignment-part-1_files/bowser/bowser.min.js","visual-analytics-assignment-part-1_files/distill/template.v2.js","visual-analytics-assignment-part-1_files/header-attrs/header-attrs.js","visual-analytics-assignment-part-1_files/jquery/jquery.min.js","visual-analytics-assignment-part-1_files/popper/popper.min.js","visual-analytics-assignment-part-1_files/tippy/tippy-bundle.umd.min.js","visual-analytics-assignment-part-1_files/tippy/tippy-light-border.css","visual-analytics-assignment-part-1_files/tippy/tippy.css","visual-analytics-assignment-part-1_files/tippy/tippy.umd.min.js","visual-analytics-assignment-part-1_files/webcomponents/webcomponents.js"]}
+  </script>
+  <!--radix_placeholder_navigation_in_header-->
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="visual-analytics-assignment-part-1_files/header-attrs/header-attrs.js"></script>
+  <script src="visual-analytics-assignment-part-1_files/jquery/jquery.min.js"></script>
+  <script src="visual-analytics-assignment-part-1_files/popper/popper.min.js"></script>
+  <link href="visual-analytics-assignment-part-1_files/tippy/tippy.css" rel="stylesheet" />
+  <link href="visual-analytics-assignment-part-1_files/tippy/tippy-light-border.css" rel="stylesheet" />
+  <script src="visual-analytics-assignment-part-1_files/tippy/tippy.umd.min.js"></script>
+  <script src="visual-analytics-assignment-part-1_files/anchor/anchor.min.js"></script>
+  <script src="visual-analytics-assignment-part-1_files/bowser/bowser.min.js"></script>
+  <script src="visual-analytics-assignment-part-1_files/webcomponents/webcomponents.js"></script>
+  <script src="visual-analytics-assignment-part-1_files/distill/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <!--/radix_placeholder_site_in_header-->
+
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Visual Analytics Assignment Part 1","description":"A short description of the post.","authors":[{"author":"Ong Chee Hong","authorURL":"https://www.linkedin.com/in/alexongch/","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-07-28T00:00:00.000+08:00","citationText":"Hong, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Visual Analytics Assignment Part 1</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+<p><p>A short description of the post.</p></p>
+</div>
+
+<div class="d-byline">
+  Ong Chee Hong <a href="https://www.linkedin.com/in/alexongch/" class="uri">https://www.linkedin.com/in/alexongch/</a> 
+  
+<br/>07-28-2021
+</div>
+
+<div class="d-article">
+<h1 id="vast-challenge-2021-mini-challenge-2">Vast Challenge 2021: Mini-Challenge 2</h1>
+<h1 id="background">Background</h1>
+<p>Many of the Abila, Kronos-based employees of GAStech have company cars which are approved for both personal and business use. Those who do not have company cars have the ability to check out company trucks for business use, but these trucks cannot be used for personal business.</p>
+<p>Employees with company cars are happy to have these vehicles, because the company cars are generally much higher quality than the cars they would be able to afford otherwise. However, GAStech does not trust their employees. Without the employees? knowledge, GAStech has installed geospatial tracking software in the company vehicles. The vehicles are tracked periodically as long as they are moving.</p>
+<p>This vehicle tracking data has been made available to law enforcement to support their investigation. Unfortunately, data is not available for the day the GAStech employees went missing. Data is only available for the two weeks prior to the disappearance.</p>
+<p>To promote local businesses, Kronos based companies provide a Kronos Kares benefit card to GASTech employees giving them discounts and rewards in exchange for collecting information about their credit card purchases and preferences as recorded on loyalty cards. This data has been made available to investigators in the hopes that it can help resolve the situation. However, Kronos Kares does not collect personal information beyond purchases.</p>
+<p>As a visual analytics expert assisting law enforcement, your mission is to identify which GASTech employees made which purchases and identify suspicious patterns of behavior. You must cope with uncertainties that result from missing, conflicting, and imperfect data to make recommendations for further investigation.</p>
+<h1 id="questions">Questions</h1>
+<ol type="1">
+<li><p>Using just the credit and loyalty card data, identify the most popular locations, and when they are popular. What anomalies do you see? What corrections would you recommend to correct these anomalies? Please limit your answer to 8 images and 300 words.</p></li>
+<li><p>Add the vehicle data to your analysis of the credit and loyalty card data. How does your assessment of the anomalies in question 1 change based on this new data? What discrepancies between vehicle, credit, and loyalty card data do you find? Please limit your answer to 8 images and 500 words.</p></li>
+<li><p>Can you infer the owners of each credit card and loyalty card? What is your evidence? Where are there uncertainties in your method? Where are there uncertainties in the data? Please limit your answer to 8 images and 500 words.</p></li>
+<li><p>Given the data sources provided, identify potential informal or unofficial relationships among GASTech personnel. Provide evidence for these relationships. Please limit your response to 8 images and 500 words.</p></li>
+<li><p>Do you see evidence of suspicious activity? Identify 1- 10 locations where you believe the suspicious activity is occurring, and why Please limit your response to 10 images and 500 words.</p></li>
+</ol>
+<p>#Scope of work</p>
+<p>To address the questions above, below is the required scope of work 1. Literature Review 2. Data preparation 3. Methodology and visualisation 4. Answers 5. Acknowledgment</p>
+<h1 id="literature-review">1. Literature Review</h1>
+<p>This year Vast Challenge uses the same question based on 2014 Vast Challenge. As such, we will conduct literature review on past 2014 Vast Challenge submission based on MC2 – Patterns of Life Analysis. We will select some of the past submission to identify some of the gaps that can potentially utilized interactive data visualization techniques to improve user experiences. The repository for 2014 Vast Challenge – MC2: Patterns of Life Analysis submissions can be found <a href="http://visualdata.wustl.edu/varepository/VAST%20Challenge%202014/challenges/MC2%20-%20Patterns%20of%20Life%20Analysis/">here</a></p>
+<h3 id="university-of-buenos-aries---arcaya.">1.1 University of Buenos Aries - Arcaya.</h3>
+<p>The localization of different people based on bar chart is difficult to visualize as there are too many people with indicated by different type of colours and there are too many locations thereby squeezing the bar chart altogether. A recommendation is to split location up into 3-4 groups so that it will be easier to visualize.</p>
+<p><img src="img/localization.png" /></p>
+<h3 id="shandong-university">1.2 Shandong University</h3>
+<p>The price vs consumption area by using density plot is not a very good idea as it is very confusing to know which employee is which as there are too many employees squeeze into one chart. There is no legend or tooltip to indicate the employees.</p>
+<p><img src="img/Density%20plot.jpg" /></p>
+<h3 id="astri">1.3. ASTRI</h3>
+<p>The bar chart used to indicate less frequented location is too squeezy especially those portion with many departments squeeze into one location. These makes it difficult for people to analyse. A recommendation is to group the data into lesser locations and possibly provided some interactivity where user can click the legend to select the department they want.</p>
+<p><img src="img/bar.png" /></p>
+<h1 id="data-preparation">2. Data preparation</h1>
+<h3 id="customisation-of-code-chunks">2.1 Customisation of code chunks</h3>
+<p>First, we will customize the all code chunks using the below knitr code. More information on chunk options can be found <a href="https://yihui.org/knitr/options/#animation">here</a></p>
+<h3 id="installing-required-r-packages">2.2 Installing required R packages</h3>
+<p>Next, we will install the required R packages. There are three basic groups of packages that we will install,</p>
+<ol type="1">
+<li><p>For data manipulation and preparation The <a href="https://www.tidyverse.org/"><em>tidyverse</em></a> package is a group of R packages including <a href="https://dplyr.tidyverse.org/"><em>dplyr</em></a>, <a href="https://tidyr.tidyverse.org/"><em>tidyr</em></a> that assist user to manipulate data.</p></li>
+<li><p>Date and Time The two packages <a href="https://clock.r-lib.org/"><em>clock</em></a> and <a href="https://lubridate.tidyverse.org/"><em>lubridate</em></a> are used for the manipulation of date and time data</p></li>
+<li><p>Interactive data analysis The two packages <a href="https://cran.rstudio.com/web/packages/ggiraph/ggiraph.pdf"><em>ggiraph</em></a> and <a href="https://plotly.com/r/"><em>plotly</em></a> are used to output data into interactive graphical/chart form for analysis.</p></li>
+<li><p>GeoVisual Analysis The packages <a href="https://cran.r-project.org/web/packages/raster/raster.pdf"><em>raster</em></a>, <a href="https://r-spatial.github.io/sf/"><em>sf</em></a>,<a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html"><em>tmap</em></a> and <a href="https://cran.r-project.org/web/packages/rgdal/index.html"><em>rgdal</em></a> are used for geospatial visual analytics where data are output to a map for analysis such as movement of people etc.</p></li>
+<li><p>Network Analysis Lastly, to analyse the relationship between people etc. We will use the packages from <a href="https://www.data-imaginist.com/2017/introducing-tidygraph/"><em>tidygraph</em></a>, <a href="https://igraph.org/"><em>igraph</em></a>, <a href="https://www.data-imaginist.com/2017/ggraph-introduction-layouts/"><em>ggraph</em></a> and <a href="https://datastorm-open.github.io/visNetwork/#:~:text=visNetwork%20is%20an%20R%20package,%2Fdatastorm%2Dopen%2FvisNetwork."><em>visNetwork</em></a>. <em>visNetwork</em> is a package to output interactive network analysis.</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>packages</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'DT'</span>,<span class='st'>'ggiraph'</span>,<span class='st'>'plotly'</span>,<span class='st'>'tidyverse'</span>, <span class='st'>'raster'</span>,<span class='st'>'sf'</span>,<span class='st'>'clock'</span>,<span class='st'>'tmap'</span>,
+             <span class='st'>'rgdal'</span>,<span class='st'>'dplyr'</span>, <span class='st'>'tidyr'</span>, <span class='st'>'textclean'</span>, <span class='st'>"plotly"</span>, <span class='st'>"forcats"</span>, <span class='st'>"jpeg"</span>, <span class='st'>"tiff"</span>,
+             <span class='st'>"mapview"</span>,<span class='st'>"tidygraph"</span>,<span class='st'>"igraph"</span>,<span class='st'>"ggraph"</span>,<span class='st'>"visNetwork"</span>,<span class='st'>"lubridate"</span><span class='op'>)</span>
+<span class='kw'>for</span><span class='op'>(</span><span class='va'>p</span> <span class='kw'>in</span> <span class='va'>packages</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='op'>!</span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>require</a></span><span class='op'>(</span><span class='va'>p</span>,character.only <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='va'>p</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'>p</span>,character.only <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+<span class='op'>}</span>
+</code></pre>
+</div>
+</div>
+<h3 id="provided-data-and-information">2.3 Provided data and information</h3>
+<p>There are 3 different types of data &amp; information provided. A <em>geospatial dataset</em>, <em>csv files</em> and a <em>jpg file</em> consisting of the Abila tourist map.</p>
+<p>Below is the information of all the data provided.</p>
+<h3 id="a-csv-file-on-vehicle-assignments-to-employee-car-assignments.csv">2.3.1. A csv file on vehicle assignments to employee (car-assignments.csv)</h3>
+<ol type="1">
+<li><p>Employee Last Name</p></li>
+<li><p>Employee First Name</p></li>
+<li><p>Car ID (integer)</p></li>
+<li><p>Current Employment Type (Department; categorical)</p></li>
+<li><p>Current Employment Title (job title; categorical)</p></li>
+</ol>
+<h3 id="a-csv-file-of-vehicle-tracking-data-gps.csv">2.3.2. A CSV file of vehicle tracking data (gps.csv)</h3>
+<p>3.1 Timestamp</p>
+<p>3.2 Car ID (integer)</p>
+<p>3.3 Latitude</p>
+<p>3.4 Longitude</p>
+<h3 id="a-csv-file-containing-loyalty-card-transaction-data-loyalty_data.csv">2.3.3. A CSV file containing loyalty card transaction data (loyalty_data.csv)</h3>
+<p>4.1 Timestamp</p>
+<p>4.2 Location (name of the business)</p>
+<p>4.3 Price (real)</p>
+<p>4.4 Loyalty Number (A 5-character code starting with L that is unique for each card)</p>
+<h3 id="a-csv-file-containing-credit-and-debit-card-transaction-data-cc_data.csv">2.3.4. A CSV file containing credit and debit card transaction data (cc_data.csv)</h3>
+<p>5.1 Timestamp</p>
+<p>5.2 Location (name of the business)</p>
+<p>5.3 Price (real)</p>
+<p>5.4 Last 4 digits of the credit or debit card number</p>
+<h3 id="esri-shapefiles-of-abila-in-the-geospatial-folder">2.3.5. ESRI shapefiles of Abila (in the Geospatial folder)</h3>
+<h3 id="a-tourist-map-of-abila-with-locations-of-interest-identified-in-jpeg-format-mc2-tourist.jpg">2.3.6. A tourist map of Abila with locations of interest identified, in JPEG format (MC2-Tourist.jpg)</h3>
+<h3 id="importing-of-data">2.4. Importing of data</h3>
+<p>We will import the 4 different <em>csv</em> datasets that were provided</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>car</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/car-assignments.csv"</span><span class='op'>)</span>
+<span class='va'>cc</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/cc_data.csv"</span><span class='op'>)</span>
+<span class='va'>gps</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/gps.csv"</span><span class='op'>)</span>
+<span class='va'>loyalty</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/loyalty_data.csv"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>If we take a look at the above datasets in excel, we will see that there are foreign characters in some of the datasets provided. An example is the Katerina’s Cafe as shown below. To address this, we will need to encode the dataset to allow rstudio to read properly.</p>
+<p><img src="img/katerine.png" /></p>
+<p>To allow use to know the encoding type for both cc and loyalty dataset. Guess encoding will be used to detect the encoding type as shown below..</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>guess_encoding</span><span class='op'>(</span><span class='va'>cc</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 1 x 2
+  encoding confidence
+  &lt;chr&gt;         &lt;dbl&gt;
+1 ASCII             1</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>guess_encoding</span><span class='op'>(</span><span class='va'>loyalty</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 1 x 2
+  encoding confidence
+  &lt;chr&gt;         &lt;dbl&gt;
+1 ASCII             1</code></pre>
+</div>
+<p>Next, we will add the code locale = locale(encoding = “ASCII” on both cc and loyalty dataset)</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>car</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/car-assignments.csv"</span><span class='op'>)</span>
+<span class='va'>cc</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/cc_data.csv"</span>, locale <span class='op'>=</span> <span class='fu'>locale</span><span class='op'>(</span>encoding <span class='op'>=</span> <span class='st'>"ASCII"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>gps</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/gps.csv"</span><span class='op'>)</span>
+<span class='va'>loyalty</span> <span class='op'>&lt;-</span> <span class='fu'>read_csv</span><span class='op'>(</span><span class='st'>"data/mc2/loyalty_data.csv"</span>,locale <span class='op'>=</span> <span class='fu'>locale</span><span class='op'>(</span>encoding <span class='op'>=</span> <span class='st'>"ASCII"</span><span class='op'>)</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="data-examination">2.5. Data examination</h3>
+<p>First, we will look at both cc and loyalty card dataset by using the <em>glimpse</em> function as shown below. There are 1490 rows and 1392 rows in both the cc and loyatly dataset respectfully. If we take look closely, we will see that these two datasets are closely linked by location, price and timestamp except the last4ccnum and loyaltynum are different.</p>
+<p>If we take a look back at the MC2 background, we will observe that Kronos based companies are allowed to collect credit card and loyalty cards information on GAStech employees purchases as such these two datasets are similar in nature.</p>
+<p>However, the rows for both cc and loyalty card data are different. This anomaly might have a few reasoning, 1) the employees did not used their credit cards while doing purchases but loyalty card was presented. 2) Vice versa, employees might also used their credit card but did not present their loyalty card during purchases.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>cc</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 1,490
+Columns: 4
+$ timestamp  &lt;chr&gt; &quot;1/6/2014 7:28&quot;, &quot;1/6/2014 7:34&quot;, &quot;1/6/2014 7:35&quot;~
+$ location   &lt;chr&gt; &quot;Brew&#39;ve Been Served&quot;, &quot;Hallowed Grounds&quot;, &quot;Brew&#39;~
+$ price      &lt;dbl&gt; 11.34, 52.22, 8.33, 16.72, 4.24, 4.17, 28.73, 9.6~
+$ last4ccnum &lt;dbl&gt; 4795, 7108, 6816, 9617, 7384, 5368, 7253, 4948, 9~</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>loyalty</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 1,392
+Columns: 4
+$ timestamp  &lt;chr&gt; &quot;1/6/2014&quot;, &quot;1/6/2014&quot;, &quot;1/6/2014&quot;, &quot;1/6/2014&quot;, &quot;~
+$ location   &lt;chr&gt; &quot;Brew&#39;ve Been Served&quot;, &quot;Brew&#39;ve Been Served&quot;, &quot;Ha~
+$ price      &lt;dbl&gt; 4.17, 9.60, 16.53, 11.51, 12.93, 4.27, 11.20, 15.~
+$ loyaltynum &lt;chr&gt; &quot;L2247&quot;, &quot;L9406&quot;, &quot;L8328&quot;, &quot;L6417&quot;, &quot;L1107&quot;, &quot;L40~</code></pre>
+</div>
+<p>Next, we will look at the vehicle datasets. The 44 rows car datasets are represented by the employee, employment information with their car assignment ID.</p>
+<p>The gps datasets are based on the car movements in respect to their lat and long position with timestamp.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>car</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 44
+Columns: 5
+$ LastName               &lt;chr&gt; &quot;Calixto&quot;, &quot;Azada&quot;, &quot;Balas&quot;, &quot;Barranc~
+$ FirstName              &lt;chr&gt; &quot;Nils&quot;, &quot;Lars&quot;, &quot;Felix&quot;, &quot;Ingrid&quot;, &quot;I~
+$ CarID                  &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12~
+$ CurrentEmploymentType  &lt;chr&gt; &quot;Information Technology&quot;, &quot;Engineerin~
+$ CurrentEmploymentTitle &lt;chr&gt; &quot;IT Helpdesk&quot;, &quot;Engineer&quot;, &quot;Engineer&quot;~</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>gps</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 685,169
+Columns: 4
+$ Timestamp &lt;chr&gt; &quot;1/6/2014 6:28&quot;, &quot;1/6/2014 6:28&quot;, &quot;1/6/2014 6:28&quot;,~
+$ id        &lt;dbl&gt; 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35~
+$ lat       &lt;dbl&gt; 36.07623, 36.07622, 36.07621, 36.07622, 36.07621, ~
+$ long      &lt;dbl&gt; 24.87469, 24.87460, 24.87444, 24.87425, 24.87417, ~</code></pre>
+</div>
+<h3 id="data-preparation-1">2.6. Data Preparation</h3>
+<h3 id="cc-and-loyalty-dataset">2.6.1 CC and Loyalty dataset</h3>
+<p>We will prepare the cc and loyalty datasets for data exploration later.</p>
+<h3 id="changing-the-datatypes-of-last4ccnum-loyaltynum">2.6.1.1. Changing the datatypes of last4ccnum &amp; loyaltynum</h3>
+<p>The last4ccnum of the cc datasets and the loyaltynum of the loyalty dataset should be a categorical data type. As such, we will change it by using the <em>as.factor</em> function.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>cc</span><span class='op'>$</span><span class='va'>last4ccnum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>cc</span><span class='op'>$</span><span class='va'>last4ccnum</span><span class='op'>)</span>
+<span class='va'>loyalty</span><span class='op'>$</span><span class='va'>loyaltynum</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>loyalty</span><span class='op'>$</span><span class='va'>loyaltynum</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Next, we will modify the datatype for both the timestamp of cc and loyalty dataset using the <em>clock</em> package. If we observe below, the data_time_parse function is use to change the timestamp to <em>dttm</em> (datetime) format while the date_parse function is used to change the data to <em>date</em> format.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>cc</span><span class='op'>$</span><span class='va'>timestamp</span> <span class='op'>&lt;-</span> <span class='fu'>date_time_parse</span><span class='op'>(</span><span class='va'>cc</span><span class='op'>$</span><span class='va'>timestamp</span>,
+                                 zone <span class='op'>=</span> <span class='st'>""</span>,
+                                 format <span class='op'>=</span> <span class='st'>"%m/%d/%Y %H:%M"</span><span class='op'>)</span>
+
+<span class='va'>loyalty</span><span class='op'>$</span><span class='va'>timestamp</span> <span class='op'>&lt;-</span> <span class='fu'>date_parse</span><span class='op'>(</span><span class='va'>loyalty</span><span class='op'>$</span><span class='va'>timestamp</span>,
+                                 format <span class='op'>=</span> <span class='st'>"%m/%d/%Y"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>We will double check the dataset to confirm that the datatype has been changed to the one we wanted.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>cc</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 1,490
+Columns: 4
+$ timestamp  &lt;dttm&gt; 2014-01-06 07:28:00, 2014-01-06 07:34:00, 2014-0~
+$ location   &lt;chr&gt; &quot;Brew&#39;ve Been Served&quot;, &quot;Hallowed Grounds&quot;, &quot;Brew&#39;~
+$ price      &lt;dbl&gt; 11.34, 52.22, 8.33, 16.72, 4.24, 4.17, 28.73, 9.6~
+$ last4ccnum &lt;fct&gt; 4795, 7108, 6816, 9617, 7384, 5368, 7253, 4948, 9~</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>loyalty</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 1,392
+Columns: 4
+$ timestamp  &lt;date&gt; 2014-01-06, 2014-01-06, 2014-01-06, 2014-01-06, ~
+$ location   &lt;chr&gt; &quot;Brew&#39;ve Been Served&quot;, &quot;Brew&#39;ve Been Served&quot;, &quot;Ha~
+$ price      &lt;dbl&gt; 4.17, 9.60, 16.53, 11.51, 12.93, 4.27, 11.20, 15.~
+$ loyaltynum &lt;fct&gt; L2247, L9406, L8328, L6417, L1107, L4034, L6110, ~</code></pre>
+</div>
+<h3 id="splitting-the-timestamp-data-into-individual-date-time-and-day-columns.">2.6.1.2 Splitting the timestamp data into individual date, time and day columns.</h3>
+<p>To allow us to dive deeper into our analysis later, we will split the timestamp dataset into date, time and day columns. We will first add more columns by using the <em>mutate</em> function from dplyr to add day, date and time columns in the cc dataset and importing in to the <em>cc_dtsplit</em> object.</p>
+<p>There is no need to add columns for the loyatly dataset as we will join both the datasets together in which day will be included in the joined dataset.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>cc_dtsplit</span> <span class='op'>&lt;-</span> <span class='va'>cc</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>mutate</span><span class='op'>(</span>day <span class='op'>=</span> <span class='fu'>date_weekday_factor</span><span class='op'>(</span><span class='va'>cc</span><span class='op'>$</span><span class='va'>timestamp</span><span class='op'>)</span>, date <span class='op'>=</span>  <span class='fu'>as_date</span><span class='op'>(</span><span class='va'>cc</span><span class='op'>$</span><span class='va'>timestamp</span><span class='op'>)</span>, time <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>cc</span><span class='op'>$</span><span class='va'>timestamp</span>, format <span class='op'>=</span> <span class='st'>"%H:%M"</span><span class='op'>)</span><span class='op'>)</span>
+
+<span class='va'>cc_dtsplit</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 1,490 x 7
+   timestamp           location      price last4ccnum day   date      
+   &lt;dttm&gt;              &lt;chr&gt;         &lt;dbl&gt; &lt;fct&gt;      &lt;ord&gt; &lt;date&gt;    
+ 1 2014-01-06 07:28:00 Brew&#39;ve Been~ 11.3  4795       Mon   2014-01-06
+ 2 2014-01-06 07:34:00 Hallowed Gro~ 52.2  7108       Mon   2014-01-06
+ 3 2014-01-06 07:35:00 Brew&#39;ve Been~  8.33 6816       Mon   2014-01-06
+ 4 2014-01-06 07:36:00 Hallowed Gro~ 16.7  9617       Mon   2014-01-06
+ 5 2014-01-06 07:37:00 Brew&#39;ve Been~  4.24 7384       Mon   2014-01-06
+ 6 2014-01-06 07:38:00 Brew&#39;ve Been~  4.17 5368       Mon   2014-01-06
+ 7 2014-01-06 07:42:00 Coffee Camel~ 28.7  7253       Mon   2014-01-06
+ 8 2014-01-06 07:43:00 Brew&#39;ve Been~  9.6  4948       Mon   2014-01-06
+ 9 2014-01-06 07:43:00 Brew&#39;ve Been~ 16.9  9683       Mon   2014-01-06
+10 2014-01-06 07:47:00 Hallowed Gro~ 16.5  8129       Mon   2014-01-06
+# ... with 1,480 more rows, and 1 more variable: time &lt;chr&gt;</code></pre>
+</div>
+<p>To allow us to join both datasets together, we will need to rename the timestamp column from the loyatly dataset to <em>date</em> so that both the date columns have the same name.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>loyalty_dt</span> <span class='op'>&lt;-</span> <span class='fu'>rename</span><span class='op'>(</span><span class='va'>loyalty</span>, date <span class='op'>=</span> <span class='va'>timestamp</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>We will take a look at our newly cleaned datasets to double check the changed we have made previously.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>cc_dtsplit</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 1,490
+Columns: 7
+$ timestamp  &lt;dttm&gt; 2014-01-06 07:28:00, 2014-01-06 07:34:00, 2014-0~
+$ location   &lt;chr&gt; &quot;Brew&#39;ve Been Served&quot;, &quot;Hallowed Grounds&quot;, &quot;Brew&#39;~
+$ price      &lt;dbl&gt; 11.34, 52.22, 8.33, 16.72, 4.24, 4.17, 28.73, 9.6~
+$ last4ccnum &lt;fct&gt; 4795, 7108, 6816, 9617, 7384, 5368, 7253, 4948, 9~
+$ day        &lt;ord&gt; Mon, Mon, Mon, Mon, Mon, Mon, Mon, Mon, Mon, Mon,~
+$ date       &lt;date&gt; 2014-01-06, 2014-01-06, 2014-01-06, 2014-01-06, ~
+$ time       &lt;chr&gt; &quot;07:28&quot;, &quot;07:34&quot;, &quot;07:35&quot;, &quot;07:36&quot;, &quot;07:37&quot;, &quot;07:~</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>loyalty_dt</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 1,392
+Columns: 4
+$ date       &lt;date&gt; 2014-01-06, 2014-01-06, 2014-01-06, 2014-01-06, ~
+$ location   &lt;chr&gt; &quot;Brew&#39;ve Been Served&quot;, &quot;Brew&#39;ve Been Served&quot;, &quot;Ha~
+$ price      &lt;dbl&gt; 4.17, 9.60, 16.53, 11.51, 12.93, 4.27, 11.20, 15.~
+$ loyaltynum &lt;fct&gt; L2247, L9406, L8328, L6417, L1107, L4034, L6110, ~</code></pre>
+</div>
+<h3 id="changing-the-datatypes-of-car-gps">2.6.1.3. Changing the datatypes of car &amp; gps</h3>
+<p>First, we will take a look at the car &amp; gps datasets. Notice that the CarID and id for both datasets are not of the correct categorical datatype. We will proceed to change both the two columns.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>car</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 44
+Columns: 5
+$ LastName               &lt;chr&gt; &quot;Calixto&quot;, &quot;Azada&quot;, &quot;Balas&quot;, &quot;Barranc~
+$ FirstName              &lt;chr&gt; &quot;Nils&quot;, &quot;Lars&quot;, &quot;Felix&quot;, &quot;Ingrid&quot;, &quot;I~
+$ CarID                  &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12~
+$ CurrentEmploymentType  &lt;chr&gt; &quot;Information Technology&quot;, &quot;Engineerin~
+$ CurrentEmploymentTitle &lt;chr&gt; &quot;IT Helpdesk&quot;, &quot;Engineer&quot;, &quot;Engineer&quot;~</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>gps</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 685,169
+Columns: 4
+$ Timestamp &lt;chr&gt; &quot;1/6/2014 6:28&quot;, &quot;1/6/2014 6:28&quot;, &quot;1/6/2014 6:28&quot;,~
+$ id        &lt;dbl&gt; 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35~
+$ lat       &lt;dbl&gt; 36.07623, 36.07622, 36.07621, 36.07622, 36.07621, ~
+$ long      &lt;dbl&gt; 24.87469, 24.87460, 24.87444, 24.87425, 24.87417, ~</code></pre>
+</div>
+<p>Changing of CarID and ID to categorical data.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>car</span><span class='op'>$</span><span class='va'>CarID</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>car</span><span class='op'>$</span><span class='va'>CarID</span><span class='op'>)</span>
+<span class='va'>gps</span><span class='op'>$</span><span class='va'>id</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>gps</span><span class='op'>$</span><span class='va'>id</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="combining-both-first-and-last-name.">2.6.1.4. Combining both first and last name.</h3>
+<p>Next, we will combine both first and last name of the car datasets into one column for us to analyse the person easily. We will use the <em>tidyr</em> function unite to unify both the first and last name into <em>name</em>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>car_unite</span> <span class='op'>&lt;-</span> <span class='va'>car</span> <span class='op'>%&gt;%</span>
+  <span class='fu'>unite</span><span class='op'>(</span>col <span class='op'>=</span> <span class='st'>"name"</span>, <span class='va'>LastName</span>,<span class='va'>FirstName</span>, sep <span class='op'>=</span> <span class='st'>", "</span>,  remove <span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span> 
+</code></pre>
+</div>
+</div>
+<h3 id="change-datatype-of-time-and-rename-id-to-carid">2.6.1.5. Change datatype of time and rename id to Carid</h3>
+<p>Next, we will rename the id of gps to CarID to match with the car_unite data. Additionally, the Timestamp data of gps will be changed to the dttm format</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>gps_cleaned</span> <span class='op'>&lt;-</span> <span class='fu'>rename</span><span class='op'>(</span><span class='va'>gps</span>,CarID <span class='op'>=</span> <span class='va'>id</span><span class='op'>)</span>
+
+<span class='va'>gps_cleaned</span><span class='op'>$</span><span class='va'>Timestamp</span> <span class='op'>&lt;-</span> <span class='fu'>date_time_parse</span><span class='op'>(</span><span class='va'>gps_cleaned</span><span class='op'>$</span><span class='va'>Timestamp</span>,
+                                 zone <span class='op'>=</span> <span class='st'>""</span>,
+                                 format <span class='op'>=</span> <span class='st'>"%m/%d/%Y %H:%M"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Lastly, we will look at our cleaned dataset and we have done cleaning the data.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>car_unite</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 44
+Columns: 6
+$ name                   &lt;chr&gt; &quot;Calixto, Nils&quot;, &quot;Azada, Lars&quot;, &quot;Bala~
+$ LastName               &lt;chr&gt; &quot;Calixto&quot;, &quot;Azada&quot;, &quot;Balas&quot;, &quot;Barranc~
+$ FirstName              &lt;chr&gt; &quot;Nils&quot;, &quot;Lars&quot;, &quot;Felix&quot;, &quot;Ingrid&quot;, &quot;I~
+$ CarID                  &lt;fct&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12~
+$ CurrentEmploymentType  &lt;chr&gt; &quot;Information Technology&quot;, &quot;Engineerin~
+$ CurrentEmploymentTitle &lt;chr&gt; &quot;IT Helpdesk&quot;, &quot;Engineer&quot;, &quot;Engineer&quot;~</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>glimpse</span><span class='op'>(</span><span class='va'>gps_cleaned</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>Rows: 685,169
+Columns: 4
+$ Timestamp &lt;dttm&gt; 2014-01-06 06:28:00, 2014-01-06 06:28:00, 2014-01~
+$ CarID     &lt;fct&gt; 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35~
+$ lat       &lt;dbl&gt; 36.07623, 36.07622, 36.07621, 36.07622, 36.07621, ~
+$ long      &lt;dbl&gt; 24.87469, 24.87460, 24.87444, 24.87425, 24.87417, ~</code></pre>
+</div>
+<h1 id="methodology-and-visualisation-methods">3. Methodology and Visualisation methods</h1>
+<p>Below we will discuss some methodology and visualization methods used to answer the questions later.</p>
+<h3 id="bar-chart">3.1. Bar Chart</h3>
+<p>First, we will be using a bar chart to analyse the number of patrons to each location. A bar chart is very useful to analyse categorical data based on number of instances.</p>
+<p>The code uses both tidyverse and plotly packages to create the bar chart. First, a count was used to count each location by visits. Then a mutate function was used to create and sort the location by count in descending order. Next, a plotly bar chart was created by indicating the x and y axis with additional layout for the chart.</p>
+<p>The plotly bar chart is accessible later in the question segment. <img src="img/bar%20chart.PNG" /></p>
+<h3 id="line-chart">3.2. Line chart</h3>
+<p>To visualize timeseries data, a time-series line chart is great for analysis.</p>
+<p>The below line chart uses the top few most visited places to plot into a timeseries line. <img src="img/line%20chart.PNG" /></p>
+<h3 id="geospatial-visualization">3.3. Geospatial visualization</h3>
+<p>Next, a geospatial map visualisation is created to analyse the movement of each vehicle.</p>
+<p><img src="img/geo.PNG" /></p>
+<h3 id="network-analysis">3.4. Network analysis</h3>
+<p>An interactive network data analysis is created to visualise the realtionship between each person.</p>
+<p>Notice that the carid can be selected to see its relationship between other carid. Those that are nearest and highlighted are carid that have a close relationship with the person of interest.</p>
+<p><img src="img/network.PNG" /></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
